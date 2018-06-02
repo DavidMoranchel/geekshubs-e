@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+
+    html,
+    body {
+      margin: 0;
+    }
+
+    ul {
+      margin: 0;
+      list-style-type: none;
+    }
+
+    li {
+      cursor: pointer;
+      text-align: center;
+      width: 10%;
+      height: 50px;
+      background: #e4e4e4;
+      border-radius: 10px;
+      line-height: 3;
+      margin: 30px 0;
+    }
+
+    li:hover{
+      background: -webkit-linear-gradient(51deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+      background: -o-linear-gradient(51deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+      background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+      color: white;
+    }
+    .active-li {
+      background: -webkit-linear-gradient(51deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+      background: -o-linear-gradient(51deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+      background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+
+  <ul>
+    <li id="1" class="list">
+      <a>Django</a>
+    </li>
+    <li id="2" class="list">
+      <a>Node JS</a>
+    </li>
+    <li id="3" class="list">
+      <a>Rails</a>
+    </li>
+    <li id="4" class="list">
+      <a>Laravel</a>
+    </li>
+    <li id="5" class="list">
+      <a>Flask</a>
+    </li>
+  </ul>
+
+  <!-- jquery -->
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+  </script>
+  <script>
+
+    $('li').on('click', (e) => {
+      console.log(e);
+      $('#'+e.target.id).addClass('active-li');
+    });
+
+  </script>
+</body>
+</html>
